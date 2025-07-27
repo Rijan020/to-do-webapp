@@ -23,7 +23,7 @@ A modern, responsive and interactive To-Do List web app to help you manage your 
 
 ## 🚀 Live Demo
 
-Coming soon: [https://yourusername.github.io/todo-list-app](https://yourusername.github.io/todo-list-app)
+Coming soon: 
 
 ## 📂 File Structure
 
