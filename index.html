@@ -1,79 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>My Awesome To-Do List App - Organize Your Tasks Efficiently</title>
-    
-    <meta name="description" content="Manage your daily tasks with ease using My Awesome To-Do List. Add, categorize, set due dates, search, sort, and track your productivity.">
-    
-    <meta name="keywords" content="to-do list, task manager, productivity app, task organizer, daily planner, personal tasks, work tasks, study tasks">
-    
-    
-    <link rel="icon" href="https://placehold.co/32x32/3498db/ffffff?text=T0-D0" type="image/png">
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Awesome To-Do List App - Organize Your Tasks Efficiently</title>
+<meta name="description" content="Manage your daily tasks with ease using My Awesome To-Do List. Add, categorize, set due dates, search, sort, and track your productivity." />
+<meta name="keywords" content="to-do list, task manager, productivity app, task organizer, daily planner, personal tasks, work tasks, study tasks" />
+<link rel="icon" href="https://placehold.co/32x32/3498db/ffffff?text=T0-D0" type="image/png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <main class="container">
-        <header class="header">
-            
-            <h1>My To-Do List</h1>
-            
-            <button id="darkModeToggle" class="icon-button" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
-        </header>
+<main class="container">
+  <header class="header">
+    <h1>My To-Do List</h1>
+    <button id="darkModeToggle" class="icon-button" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
 
-        <section class="task-input-section">
-            <input type="text" id="taskInput" placeholder="Add a new task..." aria-label="New task description">
-            <input type="date" id="dueDateInput" aria-label="Task due date">
-            <select id="categorySelect" aria-label="Task category">
-                <option value="Work">Work</option>
-                <option value="Study">Study</option>
-                <option value="Personal">Personal</option>
-                <option value="Shopping">Shopping</option>
-                <option value="Health">Health</option>
-            </select>
-            <button id="addTaskBtn" class="add-button">Add Task</button>
-        </section>
+  <section class="task-input-section">
+    <input type="text" id="taskInput" placeholder="Add a new task..." aria-label="New task description" />
+    <input type="date" id="dueDateInput" aria-label="Task due date" />
+    <select id="categorySelect" aria-label="Task category">
+      <option value="Work">Work</option>
+      <option value="Study">Study</option>
+      <option value="Personal">Personal</option>
+      <option value="Shopping">Shopping</option>
+      <option value="Health">Health</option>
+    </select>
+    <button id="addTaskBtn" class="add-button">Add Task</button>
+  </section>
 
-        <section class="filter-sort-section">
-            <input type="text" id="searchInput" placeholder="Search tasks..." aria-label="Search tasks">
-            <select id="sortSelect" aria-label="Sort tasks by">
-                <option value="dueDateAsc">Sort by Due Date (Asc)</option>
-                <option value="dueDateDesc">Sort by Due Date (Desc)</option>
-                <option value="category">Sort by Category</option>
-                <option value="default">Default Order</option>
-            </select>
-        </section>
+  <section class="filter-sort-section">
+    <input type="text" id="searchInput" placeholder="Search tasks..." aria-label="Search tasks" />
+    <select id="sortSelect" aria-label="Sort tasks by">
+      <option value="dueDateAsc">Sort by Due Date (Asc)</option>
+      <option value="dueDateDesc">Sort by Due Date (Desc)</option>
+      <option value="category">Sort by Category</option>
+      <option value="default">Default Order</option>
+    </select>
+  </section>
 
-        <ul id="taskList" class="task-list">
-            
-        </ul>
+  <ul id="taskList" class="task-list"></ul>
+</main>
 
-        <section class="data-management-section">
-            <button id="exportBtn" class="action-button">Export Tasks</button>
-            
-            <input type="file" id="importFile" accept=".json" style="display: none;" aria-label="Select JSON file to import">
-            <button id="importBtn" class="action-button">Import Tasks</button>
-        </section>
-    </main>
+<div id="messageBox" class="message-box" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="message-box-content">
+    <p id="messageText"></p>
+    <button id="messageBoxCloseBtn" class="message-box-close-button">OK</button>
+  </div>
+</div>
 
-    
-    <div id="messageBox" class="message-box">
-        <div class="message-box-content">
-            <p id="messageText"></p>
-            <button id="messageBoxCloseBtn" class="message-box-close-button">OK</button>
-        </div>
-    </div>
-
-    
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
