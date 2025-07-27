@@ -4,38 +4,38 @@
 /* CSS Variables for Theming */
 :root {
     /* Light Mode Colors */
-    --primary-bg: #f4f7f6; /* Light background for body */
-    --secondary-bg: #ffffff; /* Card/Container background */
-    --text-color: #333333; /* Main text color */
-    --heading-color: #2c3e50; /* Heading color */
-    --border-color: #e0e0e0; /* Borders and dividers */
-    --input-bg: #f9f9f9; /* Input field background */
-    --button-bg: #3498db; /* Primary button background */
-    --button-text: #ffffff; /* Primary button text */
-    --button-hover: #2980b9; /* Primary button hover */
-    --delete-button-bg: #e74c3c; /* Delete button background */
-    --delete-button-hover: #c0392b; /* Delete button hover */
-    --complete-button-bg: #2ecc71; /* Complete button background */
-    --complete-button-hover: #27ae60; /* Complete button hover */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Box shadow */
-    --placeholder-color: #95a5a6; /* Input placeholder color */
-    --task-item-bg: #ffffff; /* Task item background */
-    --task-completed-bg: #ecf0f1; /* Completed task item background */
-    --task-completed-text: #7f8c8d; /* Completed task text color */
-    --category-work: #f39c12; /* Orange */
-    --category-study: #9b59b6; /* Purple */
-    --category-personal: #3498db; /* Blue */
-    --category-shopping: #1abc9c; /* Turquoise */
-    --category-health: #e67e22; /* Carrot */
-    --past-due-color: #e74c3c; /* Red for past due */
-    --today-due-color: #f1c40f; /* Yellow for today due */
+    --primary-bg: #f4f7f6;
+    --secondary-bg: #ffffff;
+    --text-color: #333333;
+    --heading-color: #2c3e50;
+    --border-color: #e0e0e0;
+    --input-bg: #f9f9f9;
+    --button-bg: #3498db;
+    --button-text: #ffffff;
+    --button-hover: #2980b9;
+    --delete-button-bg: #e74c3c;
+    --delete-button-hover: #c0392b;
+    --complete-button-bg: #2ecc71;
+    --complete-button-hover: #27ae60;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --placeholder-color: #95a5a6;
+    --task-item-bg: #ffffff;
+    --task-completed-bg: #ecf0f1;
+    --task-completed-text: #7f8c8d;
+    --category-work: #f39c12;
+    --category-study: #9b59b6;
+    --category-personal: #3498db;
+    --category-shopping: #1abc9c;
+    --category-health: #e67e22;
+    --past-due-color: #e74c3c;
+    --today-due-color: #f1c40f;
     --message-box-bg: #ffffff;
     --message-box-border: #cccccc;
     --message-box-text: #333333;
 }
 
-/* Dark Mode Colors */
-body.dark-mode {
+/* Dark Mode Variables */
+:root.dark-mode {
     --primary-bg: #2c3e50;
     --secondary-bg: #34495e;
     --text-color: #ecf0f1;
@@ -60,6 +60,10 @@ body.dark-mode {
 }
 
 /* Base Styles */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--primary-bg);
@@ -68,10 +72,9 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align to top for longer content */
+    align-items: flex-start;
     min-height: 100vh;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    box-sizing: border-box;
 }
 
 .container {
@@ -81,8 +84,7 @@ body {
     padding: 30px;
     width: 100%;
     max-width: 700px;
-    margin-bottom: 40px; /* Add space at the bottom */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 40px;
 }
 
 .header {
@@ -105,23 +107,22 @@ h1 {
 .task-input-section,
 .filter-sort-section {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 15px; /* Space between elements */
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 25px;
 }
 
 input[type="text"],
 input[type="date"],
 select {
-    flex: 1; /* Allow inputs to grow */
+    flex: 1;
     padding: 12px 15px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--input-bg);
     color: var(--text-color);
     font-size: 1em;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
-    min-width: 150px; /* Minimum width for inputs */
+    min-width: 150px;
 }
 
 input[type="text"]::placeholder {
@@ -145,14 +146,13 @@ button {
     cursor: pointer;
     font-size: 1em;
     font-weight: 500;
-    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .add-button {
     background-color: var(--button-bg);
     color: var(--button-text);
-    flex-shrink: 0; /* Prevent button from shrinking */
+    flex-shrink: 0;
 }
 
 .add-button:hover {
@@ -161,7 +161,7 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.action-button { /* For Export/Import */
+.action-button {
     background-color: var(--button-bg);
     color: var(--button-text);
     margin-right: 10px;
@@ -173,13 +173,12 @@ button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.icon-button { /* For dark mode toggle */
+.icon-button {
     background: none;
     border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 10px 12px;
     font-size: 1.2em;
-    box-shadow: none;
 }
 
 .icon-button:hover {
@@ -204,8 +203,7 @@ button {
     padding: 15px;
     margin-bottom: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: grab; /* Indicate draggable */
+    cursor: grab;
 }
 
 .task-item.completed {
@@ -221,10 +219,6 @@ button {
     background-color: var(--input-bg);
 }
 
-.task-item:last-child {
-    margin-bottom: 0;
-}
-
 .task-item-content {
     flex-grow: 1;
     display: flex;
@@ -235,7 +229,7 @@ button {
 .task-text {
     font-weight: 500;
     margin-bottom: 5px;
-    word-break: break-word; /* Prevent long words from overflowing */
+    word-break: break-word;
 }
 
 .task-meta {
@@ -244,15 +238,6 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-}
-
-.task-meta span {
-    display: inline-flex;
-    align-items: center;
-}
-
-.task-meta i {
-    margin-right: 4px;
 }
 
 .task-due-date.past-due {
@@ -271,9 +256,9 @@ button {
     border-radius: 5px;
     font-size: 0.75em;
     font-weight: 600;
-    color: #ffffff; /* White text for badges */
+    color: #fff;
     display: inline-block;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap;
 }
 
 .category-badge.Work { background-color: var(--category-work); }
@@ -282,17 +267,16 @@ button {
 .category-badge.Shopping { background-color: var(--category-shopping); }
 .category-badge.Health { background-color: var(--category-health); }
 
-/* Task Actions (Buttons inside task item) */
+/* Task Actions */
 .task-actions {
     display: flex;
     gap: 8px;
-    flex-shrink: 0; /* Prevent actions from shrinking */
+    flex-shrink: 0;
 }
 
 .task-actions button {
     padding: 8px 12px;
     font-size: 0.9em;
-    box-shadow: none;
     border-radius: 6px;
 }
 
@@ -328,14 +312,13 @@ button {
 
 /* Custom Message Box */
 .message-box {
-    display: none; /* Hidden by default */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -369,12 +352,6 @@ button {
     opacity: 1;
 }
 
-.message-box-content p {
-    margin-bottom: 25px;
-    font-size: 1.1em;
-    line-height: 1.5;
-}
-
 .message-box-close-button {
     background-color: var(--button-bg);
     color: var(--button-text);
@@ -388,7 +365,6 @@ button {
 .message-box-close-button:hover {
     background-color: var(--button-hover);
 }
-
 
 /* Responsive Design */
 @media (max-width: 600px) {
@@ -413,7 +389,7 @@ button {
     }
 
     .icon-button {
-        align-self: flex-end; /* Push dark mode button to the right */
+        align-self: flex-end;
     }
 
     .task-input-section,
@@ -427,7 +403,7 @@ button {
     input[type="date"],
     select,
     button {
-        width: 100%; /* Full width on small screens */
+        width: 100%;
         min-width: unset;
     }
 
@@ -451,12 +427,12 @@ button {
 
     .task-actions {
         width: 100%;
-        justify-content: flex-end; /* Align buttons to the right */
+        justify-content: flex-end;
         gap: 10px;
     }
 
     .task-actions button {
-        flex-grow: 1; /* Make buttons fill available space */
+        flex-grow: 1;
         padding: 10px;
     }
 
