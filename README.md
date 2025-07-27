@@ -1,11 +1,7 @@
-Here’s a professional and informative `README.md` for your GitHub repository:
-
----
-
-```markdown
+   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # 📝 My Awesome To-Do List App
 
-A modern, responsive and interactive To-Do List web app to help you manage your daily tasks with ease and efficiency.
+A modern, responsive, and interactive To-Do List web app to help you manage your daily tasks with ease and efficiency.
 
 ## ✨ Features
 
@@ -13,7 +9,7 @@ A modern, responsive and interactive To-Do List web app to help you manage your 
   - Title
   - Due date
   - Category (Work, Study, Personal, etc.)
-- 🔍 Search & Sort tasks (by due date or category)
+- 🔍 Search & sort tasks (by due date or category)
 - 🌓 Light/Dark mode toggle
 - 📥 Import & 📤 Export tasks as JSON
 - 🧲 Drag-and-drop task reordering
@@ -23,7 +19,7 @@ A modern, responsive and interactive To-Do List web app to help you manage your 
 
 ## 🚀 Live Demo
 
-Coming soon: 
+Coming soon.
 
 ## 📂 File Structure
 
@@ -54,7 +50,7 @@ Coming soon:
 ## 📦 Import/Export Tasks
 
 * **Export:** Click `Export Tasks` to download your task list as a `.json` file.
-* **Import:** Click `Import Tasks`, choose a previously exported JSON file.
+* **Import:** Click `Import Tasks`, then select a previously exported JSON file.
 
 > 🔒 Your tasks are stored locally in your browser using `localStorage`.
 
@@ -83,8 +79,8 @@ Coming soon:
 * ☁️ Cloud sync (optional backend)
 * 📱 PWA support (Add to Home Screen)
 
-
 ## 🙌 Author
 
 Made with ❤️ by [Rijan Dhakal](https://rijandhakal0.com.np)
 
+```
