@@ -19,7 +19,7 @@ A modern, responsive, and interactive To-Do List web app to help you manage your
 
 ## 🚀 Live Demo
 
-Coming soon.
+https://rijan020.github.io/to-do-webapp/
 
 ## 📂 File Structure
 
